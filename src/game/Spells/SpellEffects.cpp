@@ -990,7 +990,7 @@ void Spell::EffectDummy(SpellEffectIndex effIdx)
 
                     pGameObj->SetRespawnTime(creatureTarget->GetRespawnTime() - time(nullptr));
                     pGameObj->SetOwnerGuid(m_caster->GetObjectGuid());
-                    //Pose un soucis(Maxinus)
+                    // Poses a problem
                     // pGameObj->SetUInt32Value(GAMEOBJECT_LEVEL, m_caster->GetLevel());
                     pGameObj->SetSpellId(m_spellInfo->Id);
                     pGameObj->SetWorldMask(m_caster->GetWorldMask());
