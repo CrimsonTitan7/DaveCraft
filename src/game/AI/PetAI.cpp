@@ -333,8 +333,6 @@ void PetAI::UpdateAI(uint32 const diff)
             // actually this only seems to happen on special spells, fire shield for imp, torment for voidwalker, but it's stupid to check every spell
             if (((Creature*)m_creature)->IsPet() && (((Pet*)m_creature)->GetPetType() == SUMMON_PET) && (m_creature != target) && (urand(0, 100) < 10))
                 m_creature->SendPetTalk((uint32)PET_TALK_SPECIAL_SPELL);
-            else
-                m_creature->SendPetAIReaction();
 
             spell->prepare(std::move(targets));
         }

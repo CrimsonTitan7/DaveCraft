@@ -7253,7 +7253,7 @@ bool Spell::CanAutoCast(Unit* target)
 
 PetTameFailureReason Spell::CheckTamingSpell(Player* caster, bool gm)
 {
-    if (caster->GetClass() != CLASS_HUNTER && !gm)
+    if (caster->GetClass() != CLASS_HUNTER && caster->GetClass() != CLASS_PALADIN && !gm)
         return PETTAME_UNITSCANTTAME;
 
     if (caster->GetPetGuid() || caster->GetCharmGuid() || (!caster->IsSavingDisabled() && sCharacterDatabaseCache.GetCharacterPetByOwner(caster->GetGUIDLow())))

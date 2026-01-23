@@ -310,7 +310,7 @@ struct CreatureInfo
 
     bool IsTameable() const
     {
-        return type == CREATURE_TYPE_BEAST && pet_family != 0 && static_flags1 & CREATURE_STATIC_FLAG_TAMEABLE;
+        return ((type == CREATURE_TYPE_BEAST) || (type == CREATURE_TYPE_HUMANOID) || (type == CREATURE_TYPE_DRAGONKIN)) && pet_family != 0 && static_flags1 & CREATURE_STATIC_FLAG_TAMEABLE;
     }
 
     uint32 GetTypeFlags() const

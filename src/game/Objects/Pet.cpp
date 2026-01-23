@@ -1250,7 +1250,7 @@ bool Pet::CreateBaseAtCreature(Creature* creature)
     SetUInt32Value(UNIT_NPC_FLAGS, UNIT_NPC_FLAG_NONE);
 
     m_loyaltyPoints = 1000;
-    if (cinfo->type == CREATURE_TYPE_BEAST)
+    if (cinfo->type == CREATURE_TYPE_BEAST || cinfo->type == CREATURE_TYPE_HUMANOID || cinfo->type == CREATURE_TYPE_DRAGONKIN)
     {
         SetByteValue(UNIT_FIELD_BYTES_0, UNIT_BYTES_0_OFFSET_CLASS, CLASS_WARRIOR);
         SetByteValue(UNIT_FIELD_BYTES_0, UNIT_BYTES_0_OFFSET_GENDER, GENDER_NONE);
